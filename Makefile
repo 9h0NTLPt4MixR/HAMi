@@ -6,8 +6,12 @@
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
-# Unless required by applicable law or agreed to in WARRANTIES OR CONDITIONS OF ANY KIND, eitherBINARY_NAME ?= hami
-Vshell git describe --tags --always --dirty GIT_COMMIT ?= $(shell git rev-parse --2>/dev/null || echo "BUILD_DATE ?= $(shell date -u +"%Y-%m-%dT%H:%M:%SZ")
+# Unless required by applicable law or agreed to in" BASIS,
+# WITHOUT WARRANTIESn# limitations under the License.
+
+B= hami
+VERshell git describe")
+GIT_COMMITshell date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Go configuration
 GO ?= go
