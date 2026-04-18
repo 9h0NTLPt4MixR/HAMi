@@ -83,6 +83,11 @@ make lint
 make generate
 ```
 
+## Local Notes
+
+> **Personal fork** — I'm using this to experiment with GPU memory limits on a single-node k3s cluster.
+> Main branch tracks upstream; `dev` branch has my local patches.
+
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
