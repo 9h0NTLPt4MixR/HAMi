@@ -87,6 +87,9 @@ make generate
 
 > **Personal fork** — I'm using this to experiment with GPU memory limits on a single-node k3s cluster.
 > Main branch tracks upstream; `dev` branch has my local patches.
+>
+> **k3s install tip**: k3s doesn't use `/etc/docker/daemon.json` — make sure to configure the nvidia container runtime
+> via `/var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl` instead, otherwise the device plugin won't work.
 
 ## License
 
