@@ -15,6 +15,10 @@ const (
 	PolicyBinpack PolicyType = "binpack"
 	// PolicySpread prefers nodes with the least allocated resources to spread workloads.
 	PolicySpread PolicyType = "spread"
+
+	// DefaultPolicy is the default scheduling policy used when none is specified.
+	// Prefer spread to avoid hotspots on a single node during normal operation.
+	DefaultPolicy PolicyType = PolicySpread
 )
 
 // NodeScore represents a node and its computed scheduling score.
@@ -68,7 +72,11 @@ func (s *SpreadPolicy) Score(node *v1.Node, available, total int64) int64 {
 }
 
 // NewPolicy creates a Policy instance for the given PolicyType.
+// If an empty string is provided, DefaultPolicy is used.
 func NewPolicy(p PolicyType) (Policy, error) {
+	if p == "" {
+		p = DefaultPolicy
+	}
 	switch p {
 	case PolicyBinpack:
 		return &BinpackPolicy{}, nil
