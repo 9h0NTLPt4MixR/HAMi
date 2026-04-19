@@ -6,11 +6,13 @@
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
-# Unless required by applicable law or agreed to in.
-# WITHOUT WARRANTIES or implied.
-# See the LicenseBINARY_NAME ?= hami
-VERSION ?= $(dev")
-GIT_COMMIT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+# Unless required by applicable law or agreed to in the.
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+INARY_NAME ?= hami
+VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo "devCOMMIT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 BUILD_DATE ?= $(shell date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Go configuration
