@@ -7,9 +7,9 @@
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in.
-# WITHOUT express or implied.
-# See theINARY_NAME ?= hami
-VERSshell git describe --tags --always --dirty dev")
+# WITHOUT WARRANTIES or implied.
+# See the LicenseBINARY_NAME ?= hami
+VERSION ?= $(dev")
 GIT_COMMIT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 BUILD_DATE ?= $(shell date -u +"%Y-%m-%dT%H:%M:%SZ")
 
